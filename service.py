@@ -1,6 +1,3 @@
-# Developed by Mirko J. Rodríguez mirko.rodriguezm@gmail.com
-#Reference: https://towardsdatascience.com/deploying-keras-models-using-tensorflow-serving-and-flask-508ba00f1037
-
 #Import Flask
 from flask import Flask, request, jsonify, redirect
 from flask_cors import CORS
@@ -17,7 +14,7 @@ import os
 from werkzeug.utils import secure_filename
 from model_loader import cargarModelo
 
-UPLOAD_FOLDER = 'images/uploads'
+UPLOAD_FOLDER = '../images/uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 port = int(os.getenv('PORT', 5000))
